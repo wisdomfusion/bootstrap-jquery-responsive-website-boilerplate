@@ -1,5 +1,5 @@
 import './common';
 
-import config from '../core/config';
+import config from '../config';
 
 console.log(config.API_PREFIX);

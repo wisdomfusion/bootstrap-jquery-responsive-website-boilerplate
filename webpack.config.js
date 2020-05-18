@@ -20,7 +20,6 @@ const UglifyJsPlugin          = require('uglifyjs-webpack-plugin');
 
 module.exports = (env, argv) => {
     const isDev   = env.dev;
-    const isStage = env.stage;
     const isProd  = env.prod;
 
     let config = {

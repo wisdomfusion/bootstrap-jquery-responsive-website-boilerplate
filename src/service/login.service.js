@@ -1,5 +1,5 @@
 import jQuery from 'jquery';
-import config from '../core/config';
+import config from '../config';
 
 class LoginService {
     constructor() {

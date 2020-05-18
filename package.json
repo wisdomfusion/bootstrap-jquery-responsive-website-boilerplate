@@ -56,8 +56,7 @@
     "start": "webpack-dev-server --env.dev --open",
     "watch": "webpack --env.dev --watch",
     "dev": "webpack --env.dev",
-    "stage": "webpack --env.stage --env.NODE_ENV staging",
-    "prod": "webpack --env.prod --env.NODE_ENV production"
+    "prod": "webpack --env.prod --mode=production"
   },
   "repository": {
     "type": "git",
