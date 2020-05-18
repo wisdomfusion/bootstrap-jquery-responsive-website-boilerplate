@@ -19,13 +19,14 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin          = require('uglifyjs-webpack-plugin');
 
 module.exports = (env, argv) => {
-    const isDev  = env.dev;
-    const isProd = env.prod;
+    const isDev   = env.dev;
+    const isStage = env.stage;
+    const isProd  = env.prod;
 
     let config = {
         mode: isProd ? 'production' : 'development',
 
-        devtool: 'source-map',
+        devtool: isProd ? '' : 'source-map',
 
         entry: {
             app: './src/app.js',
@@ -56,6 +57,7 @@ module.exports = (env, argv) => {
 
             // minify files when prod
             minimizer: isProd ? [
+                new UglifyJsPlugin(),
                 new TerserJSPlugin(),
                 new OptimizeCSSAssetsPlugin(),
             ] : [],
