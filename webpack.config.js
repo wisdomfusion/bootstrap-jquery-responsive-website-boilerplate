@@ -19,8 +19,8 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const UglifyJsPlugin          = require('uglifyjs-webpack-plugin');
 
 module.exports = (env, argv) => {
-    const isDev   = env.dev;
-    const isProd  = env.prod;
+    const isProd  = argv.mode === 'production' || false;
+    const isDev   = !isProd;
 
     let config = {
         mode: isProd ? 'production' : 'development',

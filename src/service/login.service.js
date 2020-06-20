@@ -1,14 +1,22 @@
-import jQuery from 'jquery';
-import config from '../config';
+import http from '../core/http';
+import storage from '../core/storage';
 
 class LoginService {
     constructor() {
     }
 
-    login(data) {
-        const url = `${config.API_PREFIX}/auth/login`;
+    login(data, success = () => {}, error = () => {}) {
+        const url = '/auth/login';
+        return http.post(url, data, success, error);
+    }
 
-        return jQuery.post(url, data, callback);
+    loginOut(success = () => {}) {
+        storage.removeCookie('user_info');
+        storage.removeCookie('token');
+
+        if (typeof success === 'function') {
+            success();
+        }
     }
 }
 

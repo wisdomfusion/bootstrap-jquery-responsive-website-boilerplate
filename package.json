@@ -53,10 +53,10 @@
     "webpack-dev-server": "^3.11.0"
   },
   "scripts": {
-    "start": "webpack-dev-server --env.dev --open",
-    "watch": "webpack --env.dev --watch",
-    "dev": "webpack --env.dev",
-    "prod": "webpack --env.prod --mode=production"
+    "start": "webpack-dev-server --open",
+    "watch": "webpack --watch",
+    "dev": "webpack",
+    "prod": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
