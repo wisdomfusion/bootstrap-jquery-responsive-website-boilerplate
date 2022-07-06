@@ -12,7 +12,7 @@
     "is_js": "^0.9.0",
     "jquery": "^3.5.1",
     "jquery-ui": "^1.12.1",
-    "jquery-validation": "^1.19.1",
+    "jquery-validation": "^1.19.5",
     "jquery.easing": "^1.4.1",
     "jquery.nicescroll": "^3.7.6",
     "js-cookie": "^2.2.1",
